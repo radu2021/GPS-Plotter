@@ -107,7 +107,7 @@ def stitch_tiles(x_and_y_tiles):
     return result_image
 
 def data_corner_finder(data_df):
-    return [(data["longitude"].min(), data["latitude"].max()), (data["longitude"].max(), data["latitude"].min())]
+    return [(data_df["longitude"].min(), data_df["latitude"].max()), (data_df["longitude"].max(), data_df["latitude"].min())]
 
 inputfile = input("Please enter the name of the coordinate file: ")
 data = pd.read_csv(inputfile)
