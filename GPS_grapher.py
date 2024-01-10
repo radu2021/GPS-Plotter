@@ -64,7 +64,7 @@ def generate_urls(corner1, corner2, zoom_value):
 def download_tiles(urls_list):
     for i in range(len(urls_list)):
         image_url = urls_list[i]
-        filename = str(str(urls_list[i][41:45])+"x"+str(urls_list[i][46:50]))+".png"
+        filename = str(str(urls_list[i].split("/")[5])+"x"+str(urls_list[i].split("/")[6]))
         folder_path = 'images'
         if not os.path.exists(folder_path):
             os.makedirs(folder_path)
